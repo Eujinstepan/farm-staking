@@ -1,0 +1,45 @@
+# build stage
+FROM node:lts-alpine as build-stage
+ARG HOTJAR_ID
+ARG GOOGLE_ANALYTICS_ID
+ARG API_HOST
+ARG DEBUG_LEVEL
+ARG API_RETRIES
+ARG STRIPE_KEY
+ARG STRIPE_SUCCESS_URL
+ENV VUE_APP_HOTJAR_ID=${HOTJAR_ID}
+ENV VUE_APP_GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
+ENV VUE_APP_API_HOST=${API_HOST}
+ENV VUE_APP_LOG_LEVEL=${DEBUG_LEVEL}
+ENV VUE_APP_API_RETRIES=${API_RETRIES}
+ENV VUE_APP_STRIPE_KEY=${STRIPE_KEY}
+ENV VUE_APP_STRIPE_SUCCESS_URL=${STRIPE_SUCCESS_URL}
+WORKDIR /app
+COPY package*.json ./
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh
+RUN yarn install
+COPY . .
+RUN yarn build
+
+FROM nginx:stable-alpine as production-stage
+ARG HOTJAR_ID
+ARG GOOGLE_ANALYTICS_ID
+ARG API_HOST
+ARG DEBUG_LEVEL
+ARG API_RETRIES
+ARG STRIPE_KEY
+ARG STRIPE_SUCCESS_URL
+ENV VUE_APP_HOTJAR_ID=${HOTJAR_ID}
+ENV VUE_APP_GOOGLE_ANALYTICS_ID=${GOOGLE_ANALYTICS_ID}
+ENV VUE_APP_API_HOST=${API_HOST}
+ENV VUE_APP_LOG_LEVEL=${DEBUG_LEVEL}
+ENV VUE_APP_API_RETRIES=${API_RETRIES}
+ENV VUE_APP_STRIPE_KEY=${STRIPE_KEY}
+ENV VUE_APP_STRIPE_SUCCESS_URL=${STRIPE_SUCCESS_URL}
+COPY --from=build-stage /app/dist /usr/share/nginx/html
+COPY ./app.conf /etc/nginx/conf.d/default.conf
+COPY ./certs/nginx-selfsigned.crt /etc/ssl/certs/nginx-selfsigned.crt
+COPY ./certs/nginx-selfsigned.key /etc/ssl/private/nginx-selfsigned.key
+EXPOSE 80 443
+CMD ["nginx", "-g", "daemon off;"]

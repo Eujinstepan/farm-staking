@@ -1,0 +1,50 @@
+export const mumbaiTokenList = [
+    {
+        "name": "Matic",
+        "address": "0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889",
+        "symbol": "MATIC",
+        "decimals": 18,
+        "chainId": 80001,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png"
+    },
+    {
+        "name": "Wrapped Matic",
+        "address": "0x9c3C9283D3e44854697Cd22D3Faa240Cfb032889",
+        "symbol": "WMATIC",
+        "decimals": 18,
+        "chainId": 80001,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x7D1AfA7B718fb893dB30A3aBc0Cfc608AaCfeBB0/logo.png"
+    },
+    {
+        "name": "Dai Stablecoin",
+        "address": "0xcB1e72786A6eb3b44C2a2429e317c8a2462CFeb1",
+        "symbol": "DAI",
+        "decimals": 18,
+        "chainId": 80001,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+    },
+    {
+        "name": "Tether USD",
+        "address": "0x3813e82e6f7098b9583FC0F33a962D02018B6803",
+        "symbol": "USDT",
+        "decimals": 6,
+        "chainId": 80001,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png"
+    },
+    {
+        "name": "Ether",
+        "address": "0x714550C2C1Ea08688607D86ed8EeF4f5E4F22323",
+        "symbol": "ETH",
+        "decimals": 18,
+        "chainId": 80001,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png"
+    },
+    {
+        "name": "SAND",
+        "address": "0xE03489D4E90b22c59c5e23d45DFd59Fc0dB8a025",
+        "symbol": "SAND",
+        "decimals": 18,
+        "chainId": 80001,
+        "logoURI": "https://assets.coingecko.com/coins/images/12129/small/sandbox_logo.jpg?1597397942"
+    }
+]

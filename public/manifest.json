@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "short_name": "CivTrade",
+  "name": "CivTrade",
+  "description": "Limit trading on the Ethereum mainnet",
+  "iconPath": "civ.svg",
+  "providedBy": {
+    "name": "CivFund",
+    "url": "https://app.civfund.org"
+  },
+  "icons": [
+    {
+      "src": "https://app.civfund.org/CIV_logo_txt_512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "https://app.civfund.org/Logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://app.civfund.org/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "https://app.civfund.org",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}

@@ -1,0 +1,27 @@
+$white: #ffffff;
+$black: #000000;
+$dark: #1f2330;
+$dark-1: #2c323f;
+$light-1: #999999;
+$success: #12ab9e;
+$success-1: #00fcde;
+$purple: #8d358b;
+$midnight-pearl: #662b6f;
+$outer-space: #2c323f;
+$steel-gray: #1f2330;
+$topaz: #7b7e88;
+$vulcan: #121622;
+$font-size-l: 25px;
+$font-size-m: 23px;
+$font-size-xl: 35px;
+$font-size-xxl: 41px;
+$font-family-rajdhani: "Rajdhani", Helvetica;
+
+$mq-breakpoints: (
+	mobile: 768px,
+	tablet: 960px,
+	desktop: 1264px,
+	wide: 1904px
+);
+
+@import '~sass-mq/_mq.scss';

@@ -1,0 +1,456 @@
+
+.c-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: $dark-1;
+    color: $white !important;
+    border: 2px solid $dark;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 4px));
+  }
+
+  @media screen and (max-width: 299px) {
+    .c-icon {
+      left: 150px;
+    }
+  }
+
+  .limit-trade {
+    background-color: $dark;
+    max-width: 470px;
+    width: 90%;
+    margin: 80px auto 30px auto;
+    border-radius: 31px;
+    min-width: 310px;
+
+    p {
+      text-align: left;
+      color: $white;
+      padding: 20px 20px 6px 35px;
+      font-weight: 900;
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include mq($until: mobile) {
+      margin-top: 25px;
+    }
+  }
+
+  .options {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  .options-list {
+    li.to-token {
+      box-shadow: 2px 1000px 1px #191b1f inset !important;
+      color: gray;
+    }
+
+    li {
+      max-width: 440px;
+      width: 90%;
+      //height: 100px;
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 21px;
+      padding: 10px;
+      border-radius: 30px;
+      margin: 5px auto;
+      color: $white;
+      border: solid 1px transparent;
+      background-image: linear-gradient(
+              rgba(255, 255, 255, 0),
+              rgba(255, 255, 255, 0)
+      ),
+      linear-gradient(101deg, $success, $purple);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      box-shadow: 2px 1000px 1px $dark-1 inset;
+
+      &:hover {
+        box-shadow: 2px 1000px 1px #4b5369 inset;
+      }
+
+      @media screen and (max-width: 299px) {
+        .balance {
+          max-width: 80px;
+        }
+      }
+
+      .balance {
+        font-size: 15px;
+        font-weight: 400;
+        margin-left: 5px;
+        text-align: left;
+        color: white;
+
+        .max-button {
+          color: cornflowerblue;
+          cursor: pointer;
+        }
+      }
+
+
+      @media screen and (max-width: 475px) {
+        .usd-value {
+          max-width: 50px !important;
+        }
+      }
+
+      .usd-value {
+        font-size: 15px;
+        margin-right: 5px;
+        max-width: 100px;
+      }
+
+
+      &.without-background {
+        background-image: none !important;
+        box-shadow: none !important;
+      }
+    }
+  }
+
+  li {
+    img {
+      float: left;
+      width: 45px;
+    }
+
+    div {
+      text-align: right;
+
+      &.crypto {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .is-pulled-left {
+          margin-left: 12px;
+          line-height: 54px;
+        }
+
+        .token-value {
+          line-height: 54px;
+        }
+      }
+    }
+  }
+
+  .language {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $white;
+
+    a {
+      color: $success-1 !important;
+    }
+  }
+
+  .cog-icon {
+    margin-top: 20px;
+    cursor: pointer;
+    margin-right: 30px;
+  }
+
+  .note {
+    font-weight: 400;
+    font-size: 14px;
+    color: #c1c1c1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+    white-space: nowrap;
+  }
+
+  .note-big {
+    width: 200px;
+  }
+
+  .token-value {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 200px;
+
+    .input-padding {
+      padding-left: calc(0.75em - 1px);
+      color: $light-1 !important;
+    }
+  }
+
+
+  .fixed-width-250{
+    width: 250px;
+  }
+
+  .select-token {
+    width: fit-content;
+    background: $black;
+    border-radius: 22px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 0 10px;
+    height: 54px;
+    //height: 70px;
+    display: flex;
+    align-items: center;
+    min-width: 100px;
+    margin-bottom: 5px;
+
+    .c-symbol {
+      white-space: nowrap;
+      max-width: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    img {
+      width: 25px;
+      position: relative;
+      top: 0;
+      margin-right: 6px;
+    }
+
+    p {
+      font-size: 19px;
+      position: relative;
+      top: 0;
+      padding: 0;
+    }
+
+    &:hover {
+      background: #1e1e1e;
+    }
+  }
+
+  .select-token-side-buttons {
+    text-align: left;
+    margin-left: 5px;
+    width: 45px;
+    white-space: nowrap;
+  }
+
+  .trade-info {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $light-1;
+    width: 90%;
+    margin: 10px auto 10px auto;
+  }
+
+  .trade-button {
+    border-radius: 31px;
+    width: 213px;
+    height: 50px;
+    border: solid 3px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $black inset;
+    background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, $success, $purple);
+    margin: 0 0 25px 0;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: $white;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 2px 1000px 1px #4b5369 inset;
+    }
+  }
+
+
+  .approve-button {
+    width: 300px;
+    border-radius: 31px;
+    height: 60px;
+    border: solid 3px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $black inset;
+    background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, $success, $purple);
+    margin: 0 0 25px 0;
+    font-weight: 600;
+    color: $white;
+    cursor: pointer;
+    font-size: 100%;
+    white-space: normal;
+    line-height: 18px;
+
+    &:hover {
+      box-shadow: 2px 1000px 1px #4b5369 inset;
+    }
+
+    .approve-icon {
+      width: 20px;
+      position: relative;
+      top: 3px;
+    }
+  }
+
+  .trade-button-disabled {
+    border-radius: 31px;
+    width: 213px;
+    height: 50px;
+    border: solid 3px transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 2px 1000px 1px $light-1 inset;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+    color: $white;
+    cursor: not-allowed;
+    font-size: 100%;
+    white-space: normal;
+    line-height: 18px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .trade-button-disabled {
+      height: 70px !important;
+    }
+  }
+
+  .note-bottom {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: $white;
+    width: 275px;
+    margin: auto;
+  }
+
+  .note-bottom-icon {
+    position: relative;
+    top: -37px;
+    left: 165px;
+  }
+
+  .price-pair {
+    cursor: pointer;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .invert {
+    color: cornflowerblue;
+    cursor: pointer;
+    margin-right: 5px;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .invert-icon {
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+    font-size: 20px;
+    color: gray;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .trades-performance {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: $white;
+
+    a {
+      color: rgba(0, 252, 222, 0.6) !important;
+    }
+  }
+
+  .target-price-label {
+    min-width: 107px;
+  }
+
+  .price-error {
+    color: #f14668 !important;
+    font-size: 14px !important;
+    padding: 0 !important;
+    font-weight: normal !important;
+  }
+
+  .trading-view-button {
+    position: relative;
+    top: 3px;
+  }
+
+  .trading-view-button-icon {
+    color: #a8abb4 !important;
+
+    &:hover {
+      color: #c7c9d5 !important;
+    }
+  }
+
+  .set-dollar-value-button {
+    cursor: pointer;
+    font-size: 15px;
+    color: cornflowerblue;
+    display: inline-block;
+  }
+
+  .gas-type-info {
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    color: #999999;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .dollar-value-div {
+    display: inline-block !important;
+    padding-top: 1px;
+  }
+
+
+  .font-25 {
+    font-size: 25px;
+  }
+
+  .go-to-pro-view {
+    background: #4472c4;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 2px 5px 2px 7px;
+    border-radius: 5px;
+    position: relative;
+    top: -2px;
+
+    &:hover {
+      filter: brightness(120%);
+    }
+  }
